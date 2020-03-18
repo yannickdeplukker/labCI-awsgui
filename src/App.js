@@ -9,6 +9,7 @@ require('dotenv').config();
 function App() {
     const token=""
     const apiHost = process.env.REACT_APP_APIHOST;
+    console.log("apihost=" + apiHost);
   return (
       <MuiThemeProvider >
         <CssBaseline />
