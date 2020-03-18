@@ -5,6 +5,9 @@ FROM node:12.2.0-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
+ARG REACT_APP_APIHOST
+ARG REACT_APP_STOPPEDVMIMG
+ARG REACT_APP_STARTEDVMIMG
 RUN npm install --silent
 RUN npm install react-scripts@3.0.1 -g --silent
 COPY . /app
